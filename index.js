@@ -7,4 +7,11 @@ const novoUser = new User('Mariana', 'm@m.com', '2021-01-01');
 
 console.log(novoUser.exibirInfos());
 
+const novoAdmin = new Admin('Rodrigo', 'r@r.com', '2021-01-01');
+
+console.log(novoAdmin.exibirInfos()); 
+console.log(novoAdmin.nomeAdmin());
+
+// console.log(novoUser.#montaObjUser()); não acessivel fora da class User
+
 // novoUser.#nome = 'Marcia';
