@@ -8,7 +8,14 @@ export default class Admin extends User {
     criarCurso(nomeDoCurso, vagas){
         return `curso de ${nomeDoCurso} criado com ${vagas} vagas`
     }
+    exibirInfos(){
+        // const objUser = this.#montaObjUser()
+        return `${this.nome},  ${this.ativo}, ${this.role}`
+    }
+
+    
 }
+
 
 
 // metodo criado abaixo foi um teste para verificar se os atributos estão acesseveis fora da class

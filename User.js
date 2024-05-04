@@ -11,7 +11,7 @@ export default class User {
         this.#role = role || 'estudante'
         this.#ativo = ativo
     }
-
+    //get foi utilizado para possibilitar leitura da propriedade fora da class
     get nome(){
         return this.#nome;
     }
@@ -26,8 +26,16 @@ export default class User {
     get role(){
         return this.#role
     }
-    get role(){
+    get ativo(){
         return this.#ativo
+    }
+
+    set nome(novoNome){
+        if(novoNome === ''){
+            throw new Error('Formato não valido')
+        }
+        this.#nome = novoNome
+
     }
 
     // #montaObjUser() {
@@ -40,8 +48,8 @@ export default class User {
     // }
 
     exibirInfos(){
-        const objUser = this.#montaObjUser()
-        return `${objUser.nome}, ${objUser.email},`
+        // const objUser = this.#montaObjUser()
+        return `${this.nome}, ${this.email}, ${this.ativo}, ${this.role}`
     }
 }
 
